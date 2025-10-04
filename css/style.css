@@ -1,0 +1,264 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* TIPOGRAFIA E ELEMENTOS GERAIS */
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: #000000; /* Preto forte para contraste */
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* BOTÕES (CTAs) */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+/* Botão principal (Header) */
+.btn-primary {
+    background-color: #D2B48C; /* Cor da Faixa Marrom/Bege */
+    color: #1a1a1a;
+    border: 2px solid #D2B48C;
+    font-size: 1.1em;
+}
+
+.btn-primary:hover {
+    background-color: #c0a178;
+}
+
+/* Botão secundário (Cards) */
+.btn-secondary {
+    background-color: #1a1a1a; /* Preto */
+    color: #fff;
+    border: 2px solid #1a1a1a;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    border-color: #333;
+}
+
+/* 1. HEADER (TOPO) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg_tatame.jpg') no-repeat center center/cover;
+    height: 100vh; /* Ocupa a tela inteira */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D2B48C; /* Cor de destaque */
+}
+
+.hero-content {
+    margin-top: -100px; /* Ajusta o centro */
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* 3. SEÇÕES DE E-BOOKS (CARDS) */
+.section-ebooks {
+    padding: 80px 0;
+}
+
+.section-negocios {
+    background-color: #fff; /* Fundo branco para diferenciar */
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Layout Responsivo */
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    border: 1px solid #eee;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito sutil ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 0.95em;
+    color: #555;
+    min-height: 40px; /* Garante que todos os cards tenham altura similar */
+}
+
+/* 4. SEÇÃO SOBRE O MESTRE */
+.section-sobre {
+    padding: 60px 0;
+    background-color: #eeeeee;
+}
+
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mestre-foto {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Foto redonda */
+    border: 5px solid #D2B48C;
+    flex-shrink: 0;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* 5. RODAPÉ */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer .social-links a {
+    color: #D2B48C;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: #fff;
+}
+
+
+/* RESPONSIVIDADE BÁSICA PARA TELAS PEQUENAS */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .logo, nav {
+        position: static;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav a {
+        margin: 0 10px;
+        display: inline-block;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mestre-foto {
+        margin-bottom: 20px;
+    }
+}
